@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="933f3eb4-5862-4b18-8fbf-7bdaf63b8a21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49739/PruebaBL.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PruebaBL.xsd" MetadataType="Schema" ID="6024f14b-68ad-4a23-bd25-c3ee3eb71215" SourceId="1" SourceUrl="http://localhost:49739/PruebaBL.svc?xsd=xsd1" />
+    <MetadataFile FileName="PruebaBL.disco" MetadataType="Disco" ID="51ed0c69-561b-456a-992a-0d366262276e" SourceId="1" SourceUrl="http://localhost:49739/PruebaBL.svc?disco" />
+    <MetadataFile FileName="PruebaBL.wsdl" MetadataType="Wsdl" ID="eb1bd747-d8d2-4aca-a662-39f8524b00d2" SourceId="1" SourceUrl="http://localhost:49739/PruebaBL.svc?wsdl" />
+    <MetadataFile FileName="PruebaBL1.xsd" MetadataType="Schema" ID="aface4ab-1a10-4a41-b155-684239f91d30" SourceId="1" SourceUrl="http://localhost:49739/PruebaBL.svc?xsd=xsd2" />
+    <MetadataFile FileName="PruebaBL2.xsd" MetadataType="Schema" ID="351d62eb-c136-4bbc-bd74-2362ca423089" SourceId="1" SourceUrl="http://localhost:49739/PruebaBL.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
