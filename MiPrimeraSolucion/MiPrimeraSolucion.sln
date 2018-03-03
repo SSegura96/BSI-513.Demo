@@ -21,6 +21,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraSolucion.Model", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraSolucion.Products.BL", "MiPrimeraSolucion.Products.BL\MiPrimeraSolucion.Products.BL.csproj", "{EA76FF42-4032-470F-8EDF-5BF57807E345}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{546A9F7D-55E5-4064-9ADF-8C81D256A28F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraSolucion.BL.Tests", "MiPrimeraSolucion.BL.Tests\MiPrimeraSolucion.BL.Tests.csproj", "{933F0655-A6B1-4F28-993C-096B77F3DE16}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EA76FF42-4032-470F-8EDF-5BF57807E345} = {EA76FF42-4032-470F-8EDF-5BF57807E345}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,9 +54,17 @@ Global
 		{EA76FF42-4032-470F-8EDF-5BF57807E345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA76FF42-4032-470F-8EDF-5BF57807E345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA76FF42-4032-470F-8EDF-5BF57807E345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{933F0655-A6B1-4F28-993C-096B77F3DE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933F0655-A6B1-4F28-993C-096B77F3DE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933F0655-A6B1-4F28-993C-096B77F3DE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933F0655-A6B1-4F28-993C-096B77F3DE16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0098B580-FA83-4ED9-9902-ADC008D3AF51} = {546A9F7D-55E5-4064-9ADF-8C81D256A28F}
+		{933F0655-A6B1-4F28-993C-096B77F3DE16} = {546A9F7D-55E5-4064-9ADF-8C81D256A28F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D4DDA9AD-0A0D-4CE9-B162-53F3D47B93D3}
