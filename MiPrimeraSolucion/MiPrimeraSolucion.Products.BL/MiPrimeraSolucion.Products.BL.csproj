@@ -74,6 +74,9 @@
   <ItemGroup>
     <Compile Include="Dominio\Acciones\Products.cs" />
     <Compile Include="Dominio\Especificaciones\Products.cs" />
+    <Compile Include="Dominio\Repositorios\ProductCategories.cs" />
+    <Compile Include="Dominio\Repositorios\ProductSubcategories.cs" />
+    <Compile Include="Dominio\Repositorios\ProductModels.cs" />
     <Compile Include="Dominio\Repositorios\Products.cs" />
     <Compile Include="Products.svc.cs">
       <DependentUpon>Products.svc</DependentUpon>

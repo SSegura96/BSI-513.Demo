@@ -12,6 +12,7 @@ namespace MiPrimeraSolucion.Products.BL.Dominio.Repositorios
 
         public Products ()
         {
+            _context.Configuration.ProxyCreationEnabled = false;
             _context.Configuration.LazyLoadingEnabled = true;
         }
 
@@ -35,50 +36,35 @@ namespace MiPrimeraSolucion.Products.BL.Dominio.Repositorios
                 resultado =  _context.Product.Where(p=> p.Color.Equals(elColor)).OrderByDescending(p=> p.Name).ToList();
             else
                 resultado = _context.Product.Where(p => p.Color.Contains(elColor)).OrderByDescending(p => p.Name).ToList();
-            foreach (var elemento in resultado)
-            {
-                if (elemento.ProductModel != null)
-                        elemento.ProductModelName = elemento.ProductModel.Name;
-                elemento.ProductModel = null;
-                if (elemento.ProductSubcategory != null)
-                        elemento.ProductSubcategoryName = elemento.ProductSubcategory.Name;
-                if (elemento.ProductSubcategory != null)
-                    if (elemento.ProductSubcategory.ProductCategory != null)
-                        elemento.ProductCategoryName = elemento.ProductSubcategory.ProductCategory.Name;
-                elemento.ProductSubcategory = null;
-                elemento.ProductReview = null;
-                //elemento.ProductModelName = ObtenerNombreDeModelo(elemento.ProductModelID);
-                //elemento.ProductSubcategoryName = ObtenerNombreDeSubcategoria(elemento.ProductSubcategoryID);
-                //elemento.ProductCategoryName = ObtenerNombreDeCategoria(elemento.ProductSubcategoryID);
-            }
+            TraerInformacionAdicional(resultado);
+
             return resultado;
         }
 
-        private string ObtenerNombreDeModelo(Nullable <int> idModelo)
+        private void TraerInformacionAdicional(IList<Product> resultado)
         {
-            Model.ProductModel modelo = new ProductModel();
-            if (idModelo != null)
-                modelo = _context.ProductModel.Find(idModelo);
-            return modelo.Name;
-        }
-
-        private string ObtenerNombreDeSubcategoria (Nullable <int> idSubCategoria)
-        {
-            Model.ProductSubcategory subCategoria = new ProductSubcategory();
-            if (idSubCategoria != null)
-                subCategoria = _context.ProductSubcategory.Find(idSubCategoria);
-            return subCategoria.Name;
-        }
-
-        private string ObtenerNombreDeCategoria(Nullable<int> idCategoria)
-        {
-            Model.ProductCategory categoria = new ProductCategory();
-            // TODO: Corregir la implementación
-            return string.Empty;
-            if (idCategoria != null)
-                categoria = _context.ProductCategory.Find(idCategoria);
-
-            return categoria.Name;
+            var repositorioModelo = new Repositorios.ProductModels();
+            var repositorioCategoria = new Repositorios.ProductCategories();
+            var repositorioSubcategoria = new Repositorios.ProductSubcategories();
+            foreach (var elemento in resultado)
+            {
+                //if (elemento.ProductModel != null)
+                //    elemento.ProductModelName = elemento.ProductModel.Name;
+                //elemento.ProductModel = null;
+                //if (elemento.ProductSubcategory != null)
+                //    elemento.ProductSubcategoryName = elemento.ProductSubcategory.Name;
+                //if (elemento.ProductSubcategory != null)
+                //    if (elemento.ProductSubcategory.ProductCategory != null)
+                //        elemento.ProductCategoryName = elemento.ProductSubcategory.ProductCategory.Name;
+                //elemento.ProductSubcategory = null;
+                //elemento.ProductReview = null;
+                if (elemento.ProductModelID != null)
+                    elemento.ProductModelName = repositorioModelo.ObtenerNombreDeModelo((int)elemento.ProductModelID);
+                if (elemento.ProductSubcategoryID != null)
+                    elemento.ProductSubcategoryName = repositorioSubcategoria.ObtenerNombreDeSubcategoria((int)elemento.ProductSubcategoryID);
+                if (elemento.ProductSubcategoryID != null)
+                    elemento.ProductCategoryName = repositorioSubcategoria.ObtenerNombreDeCategoria((int)elemento.ProductSubcategoryID);
+            }
         }
 
     }

@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MisModelos\MyProducts.cs" />
     <Compile Include="MisModelos\Product.cs" />
     <Compile Include="MyAdventureWorks.Context.cs">
       <AutoGen>True</AutoGen>

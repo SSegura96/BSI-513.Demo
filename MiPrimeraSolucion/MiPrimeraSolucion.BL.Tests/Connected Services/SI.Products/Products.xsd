@@ -17,12 +17,16 @@
       <xs:element minOccurs="0" name="ListPrice" type="xs:decimal" />
       <xs:element minOccurs="0" name="MakeFlag" type="xs:boolean" />
       <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MonthsAvailable" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCategoryName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductID" type="xs:int" />
       <xs:element minOccurs="0" name="ProductLine" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductModelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductModelName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductSubcategoryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductSubcategoryName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ReorderPoint" type="xs:short" />
       <xs:element minOccurs="0" name="SafetyStockLevel" type="xs:short" />
       <xs:element minOccurs="0" name="SellEndDate" nillable="true" type="xs:dateTime" />
