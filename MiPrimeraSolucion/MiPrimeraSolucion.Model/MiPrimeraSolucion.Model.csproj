@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MisContextos\AdventureWorks2012Entities.cs" />
     <Compile Include="MisModelos\Product.cs" />
     <Compile Include="MyAdventureWorks.Context.cs">
       <AutoGen>True</AutoGen>
@@ -108,5 +109,6 @@
       <LastGenOutput>MyAdventureWorks.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
