@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MiPrimeraSolucion.Products.DI.DL.ProductsDI" CodeBehind="ProductsDI.svc.cs" %>
