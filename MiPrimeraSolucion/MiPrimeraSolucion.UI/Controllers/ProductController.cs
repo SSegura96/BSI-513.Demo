@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MiPrimeraSolucion.Model;
 
-namespace MiPrimeraSolucion.UI
+namespace MiPrimeraSolucion.UI.Controllers
 {
     public class ProductController : Controller
     {
@@ -17,8 +17,12 @@ namespace MiPrimeraSolucion.UI
         // GET: Product
         public ActionResult Index()
         {
-            var product = db.Product.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
-            return View(product.ToList());
+            var elCliente = new SI.Products.ProductsClient();
+            IList<Model.Product> listaDeProductos = elCliente.ListarProductosPorColor("White");
+            elCliente.Close();
+            //var product = db.Product.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
+            //return View(product.ToList());
+            return View(listaDeProductos);
         }
 
         // GET: Product/Details/5

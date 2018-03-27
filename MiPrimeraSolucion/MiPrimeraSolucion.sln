@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraSolucion.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraSolucion.UI", "MiPrimeraSolucion.UI\MiPrimeraSolucion.UI.csproj", "{8D13BC41-3BB3-4498-A29F-154D926579F3}"
 	ProjectSection(ProjectDependencies) = postProject
+		{EA76FF42-4032-470F-8EDF-5BF57807E345} = {EA76FF42-4032-470F-8EDF-5BF57807E345}
 		{ED481557-335B-4875-B091-559F3A2B0729} = {ED481557-335B-4875-B091-559F3A2B0729}
 	EndProjectSection
 EndProject

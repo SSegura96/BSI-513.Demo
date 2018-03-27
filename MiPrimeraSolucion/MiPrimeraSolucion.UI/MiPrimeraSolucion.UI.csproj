@@ -196,6 +196,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\SI.Products\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -205,7 +210,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="ProductController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -217,6 +222,16 @@
     <None Include="Connected Services\BusinessLogicWcf\configuration91.svcinfo" />
     <None Include="Connected Services\BusinessLogicWcf\configuration.svcinfo" />
     <None Include="Connected Services\BusinessLogicWcf\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\SI.Products\MiPrimeraSolucion.UI.SI.Products.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SI.Products\Products.disco" />
+    <None Include="Connected Services\SI.Products\configuration91.svcinfo" />
+    <None Include="Connected Services\SI.Products\configuration.svcinfo" />
+    <None Include="Connected Services\SI.Products\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -241,6 +256,20 @@
     <None Include="Connected Services\BusinessLogicWcf\PruebaBL2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SI.Products\Products.wsdl" />
+    <None Include="Connected Services\SI.Products\Products.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SI.Products\Products1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SI.Products\Products2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SI.Products\Products3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Properties\DataSources\MiPrimeraSolucion.Model.Product.datasource" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -313,6 +342,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\BusinessLogicWcf\" />
+    <WCFMetadataStorage Include="Connected Services\SI.Products\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MiPrimeraSolucion.Model\MiPrimeraSolucion.Model.csproj">
