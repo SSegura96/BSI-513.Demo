@@ -18,7 +18,7 @@ namespace MiPrimeraSolucion.UI.Controllers
         public ActionResult Index()
         {
             var elCliente = new SI.Products.ProductsClient();
-            IList<Model.Product> listaDeProductos = elCliente.ListarProductosPorColor("White");
+            IList<Model.Product> listaDeProductos = elCliente.ListarProductosPorColor("Red");
             elCliente.Close();
             //var product = db.Product.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
             //return View(product.ToList());
